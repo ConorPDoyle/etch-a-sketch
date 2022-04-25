@@ -1,7 +1,5 @@
 // Important variables
 const grid = document.getElementById('grid');
-let cell = document.createElement('div');
-    cell.textContent = 'Test';
 
 // Make default grid
 function makeGrid() {
@@ -10,13 +8,24 @@ function makeGrid() {
 }
 
 // Helper functions
-function makeRows(num){
-
-}
 
 function makeColumns(num) {
-    for (let i=0; i<num; i++) {
+    for (let j=0; j<num; j++) {
         let cell = document.createElement('div');
-        grid.appendChild(cell);
+        row.appendChild(cell);
     }
 }
+function makeRows(num){
+    for (let i=0; i<num; i++) {
+        let row = document.createElement('div');
+        row.className = `x${i+1}` // Give X coordinate
+        grid.appendChild(row);
+        
+        //add
+        for (let j=0; j<num; j++) {
+            let cell = document.createElement('div');
+            row.appendChild(cell);
+        }
+    }
+}
+

@@ -1,7 +1,7 @@
 // Important variables
 const grid = document.getElementById('grid');
 let cell = document.createElement('div');
-    cell.innerHTML = 'Test';
+    cell.textContent = 'Test';
 
 // Make default grid
 function makeGrid() {
@@ -11,7 +11,10 @@ function makeGrid() {
 
 // Helper functions
 function makeRows(num){
-
+    for (let i=0; i<num; i++) {
+        let cell = document.createElement('div');
+        grid.appendChild(cell);
+    }
 }
 
 function makeColumns(num) {

@@ -11,13 +11,12 @@ function makeGrid() {
 
 // Helper functions
 function makeRows(num){
+
+}
+
+function makeColumns(num) {
     for (let i=0; i<num; i++) {
         let cell = document.createElement('div');
         grid.appendChild(cell);
     }
 }
-
-function makeColumns(num) {
-
-}
-

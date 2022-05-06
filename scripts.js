@@ -1,6 +1,5 @@
 // Important variables
 const grid = document.getElementById('grid');
-const cell = document.createElement('div')
 
 // Make default grid
 function makeGrid() {

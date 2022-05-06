@@ -1,9 +1,6 @@
 /* Square Default */
 #grid>div {
     display: inline-block;
-    height: 10px;
-    width: 10px;
-    border: 1px solid black;
 }
 
 #grid>div>div {

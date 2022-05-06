@@ -24,6 +24,5 @@ function makeTable(num){
             cell.className = `cell ${row.className}y${j+1}`; // Give X & Y coordinate
         }
     }
-
 }
 

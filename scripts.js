@@ -1,5 +1,6 @@
 // Important variables
 const grid = document.getElementById('grid');
+const cell = document.createElement('div')
 
 // Make default grid
 function makeGrid() {
@@ -20,7 +21,7 @@ function makeTable(num){
         for (let j=0; j<num; j++) {
             let cell = document.createElement('div');
             row.appendChild(cell);
-            cell.className = `${row.className}y${j+1}`; // Give X & Y coordinate
+            cell.className = `cell ${row.className}y${j+1}`; // Give X & Y coordinate
         }
     }
 

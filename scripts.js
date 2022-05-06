@@ -26,10 +26,14 @@ function makeTable(num){
     }
 }
 
-function addToggle(){
+// Etch-a-Sketch behavior
+function addToggleClass(){
     this.className = `toggle`;
 }
-makeTable(12) // Test Table
-document.querySelector('.cell').addEventListener("click", addToggle);
+
+makeTable(32) // Test Table
+document.querySelectorAll('.cell').forEach(cell =>
+    cell.addEventListener("mouseover", addToggleClass)
+)
 
 

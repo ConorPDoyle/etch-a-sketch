@@ -1,5 +1,6 @@
 // Important variables
 const grid = document.getElementById('grid');
+// const cells = document.getElementsByClassName('.cell')
 
 // Make default grid
 function makeGrid() {
@@ -24,4 +25,11 @@ function makeTable(num){
         }
     }
 }
+
+function addToggle(){
+    this.className = `toggle`;
+}
+makeTable(12) // Test Table
+document.querySelector('.cell').addEventListener("click", addToggle);
+
 

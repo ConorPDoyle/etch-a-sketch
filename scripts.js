@@ -5,17 +5,17 @@ const grid = document.getElementById('grid');
 // Helper functions
 
 function makeGrid(num){
-    // Create empty row divs
+    // Creates empty row divs based on input
     for (let i=0; i<num; i++) {
         let row = document.createElement('div');
         row.className = `x${i+1}` // Give X coordinate
         grid.appendChild(row);
         
-        // Create equal cells per each row loop ran
+        // Creates (num) of cells per row each loop
         for (let j=0; j<num; j++) {
             let cell = document.createElement('div');
             row.appendChild(cell);
-            cell.className = `cell ${row.className}y${j+1}`; // Give X & Y coordinate
+            cell.className = `cell ${row.className}y${j+1}`; // Give X & Y coordinate for cells
         }
     }
 }
@@ -26,6 +26,7 @@ function addToggleClass(){
 }
 
 makeGrid(10) // Test Grid
+// Adds 'toggle' css class to change color
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)
 )

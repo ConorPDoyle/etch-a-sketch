@@ -12,7 +12,8 @@ function makeGrid(num){
         grid.appendChild(row);
         
         // Creates (num) of cells per row each loop
-        for (let j=0; j<num; j++) {
+        //     Uses 2/3 sizing for j to replicate physical toy
+        for (let j=0; j<(2/3)*num; j++) {
             let cell = document.createElement('div');
             row.appendChild(cell);
             cell.className = `cell ${row.className}y${j+1}`; // Give X & Y coordinate for cells
@@ -25,7 +26,7 @@ function addToggleClass(){
     this.className = `toggle`;
 }
 
-makeGrid(10) // Test Grid
+makeGrid(30) // Test Grid
 // Adds 'toggle' css class to change color
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)

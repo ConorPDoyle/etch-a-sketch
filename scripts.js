@@ -2,15 +2,10 @@
 const grid = document.getElementById('grid');
 // const cells = document.getElementsByClassName('.cell')
 
-// Make default grid
-function makeGrid() {
-    makeRows(16);
-    makeColumns(16);
-}
 
 // Helper functions
 
-function makeTable(num){
+function makeGrid(num){
     // Create Rows
     for (let i=0; i<num; i++) {
         let row = document.createElement('div');
@@ -31,7 +26,7 @@ function addToggleClass(){
     this.className = `toggle`;
 }
 
-makeTable(32) // Test Table
+makeGrid(32) // Test Grid
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)
 )

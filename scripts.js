@@ -23,7 +23,7 @@ function makeGrid(num){
 
 // Etch-a-Sketch behavior
 function addToggleClass(){
-    this.className = `toggle`;
+    this.classList.add("toggle");
 }
 
 makeGrid(50) // Test Grid

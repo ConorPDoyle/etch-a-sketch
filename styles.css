@@ -19,14 +19,21 @@
     margin-bottom: 20px;
 }
 
+#grid {
+    height: 340px;
+    width: 500px;
+    display: flex;
+}
+
 #grid>div {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .cell {
+    flex: 1;
     background-color: lightgrey;
-    height: 10px;
-    width: 10px;
 }
 .toggle {
     background-color: black;

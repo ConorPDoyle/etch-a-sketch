@@ -26,7 +26,7 @@ function addToggleClass(){
     this.className = `toggle`;
 }
 
-makeGrid(30) // Test Grid
+makeGrid(50) // Test Grid
 // Adds 'toggle' css class to change color
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)

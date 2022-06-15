@@ -11,6 +11,7 @@
     height: 500px;
     width: 680px;
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
 }
 
 #title {
@@ -24,6 +25,7 @@
     height: 340px;
     width: 500px;
     display: flex;
+    border-radius: 5px;
 }
 
 #grid>div {
@@ -36,6 +38,15 @@
     flex: 1;
     background-color: lightgrey;
 }
+
 .toggle {
+    background-color: rgb(100, 100, 100);
+}
+
+.toggle1 {
+    background-color: rgb(59, 59, 59);
+}
+
+.toggle2 {
     background-color: black;
 }

@@ -22,11 +22,18 @@ function makeGrid(num){
 }
 
 // Etch-a-Sketch behavior
+    //Checks and adds increasingly dark styles to cells
 function addToggleClass(){
-    this.classList.add("toggle");
+    if (this.classList.contains("toggle1")){
+        this.classList.add("toggle2");
+    } else if (this.classList.contains("toggle")) {
+        this.classList.add("toggle1");     
+    } else {
+        this.classList.add("toggle") 
+    }
 }
 
-makeGrid(50) // Test Grid
+makeGrid(80) // Test Grid
 // Adds 'toggle' css class to change color
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)

@@ -39,6 +39,10 @@
     background-color: lightgrey;
 }
 
+.cell:hover {
+    cursor: crosshair;
+}
+
 .toggle {
     background-color: rgb(100, 100, 100);
 }

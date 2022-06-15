@@ -8,8 +8,8 @@
     flex-direction: column;
     align-items: center;
     background-color: red;
-    height: 500px;
-    width: 680px;
+    height: 550px;
+    width: 740px;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
 }
@@ -22,8 +22,8 @@
 }
 
 #grid {
-    height: 340px;
-    width: 500px;
+    height: 380px;
+    width: 600px;
     display: flex;
     border-radius: 5px;
 }

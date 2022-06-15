@@ -31,5 +31,3 @@ makeGrid(50) // Test Grid
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)
 )
-
-

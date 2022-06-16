@@ -33,8 +33,24 @@ function addToggleClass(){
     }
 }
 
-makeGrid(80) // Test Grid
+//Slider value
+let slider = document.getElementById("myRange");
+let output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+} 
+
+makeGrid(slider.value) // Grid created based on slider input
+
+// slider.addEventListener('mouseup', makeGrid(slider.value));
+
+
+
 // Adds 'toggle' css class to change color
 document.querySelectorAll('.cell').forEach(cell =>
     cell.addEventListener("mouseover", addToggleClass)
 )
+

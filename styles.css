@@ -60,12 +60,13 @@ body {
 
 #reset-button {
     font-family: 'Press Start 2P', cursive;
-    font-size: 9px;
+    margin-top: 4px;
+    font-size: 10px;
 }
 
 #pixel-slider {
     display: flex;
-    margin-top: 17px;
+    margin-top: 15px;
     align-items: center;
     justify-content: space-around;
 }

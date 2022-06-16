@@ -1,13 +1,13 @@
-#main{
+#main {
     display: flex;
     justify-content: center;
 }
 
-#etch-a-sketch {
+#etchie-sketchie {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+    background-color: rgb(212, 0, 0);
     height: 550px;
     width: 740px;
     border-radius: 30px;
@@ -45,6 +45,73 @@
 .cell:hover {
     cursor: crosshair;
 }
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#pixel-slider {
+    display: flex;
+    margin-top: 17px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#slidecontainer {
+    width: 100%;
+}
+
+.box-small {
+    height: 5px;
+    width: 5px;
+    background-color: rgb(15, 15, 15);
+    border: 1px solid black;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.box-large {
+    height: 12px;
+    width: 12px;
+    background-color: rgb(15, 15, 15);
+    border: 1px solid black;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgb(185, 185, 185);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; 
+    height: 15px; 
+    background: #353535; 
+    cursor: pointer; 
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px; 
+    height: 20px; 
+    background: #353535; 
+    cursor: pointer; 
+  }
 
 .toggle {
     background-color: rgb(100, 100, 100);

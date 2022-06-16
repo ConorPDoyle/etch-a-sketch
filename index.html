@@ -14,10 +14,21 @@
 <body>
     <div id="heading"></div>
     <div id="main">    
-        <div id="etch-a-sketch">
+        <div id="etchie-sketchie">
             <div id="title">Etchie-Sketchie</div>
             <div id="grid"></div>
-            <div id="controls"></div>
+            <div id="controls">
+                <button id="reset">Reset</button>
+                <div id="pixel-slider">
+                    <div class="box-large"></div>
+                    <div id="slidecontainer">
+                        <input type="range" min="20" max="110" 
+                            class="slider" id="myRange">
+                    </div>
+                    <div class="box-small"></div>
+                    <span>Value<div id="demo"></div></span>
+                </div>
+            </div>
         </div>
     </div>  
 </body>

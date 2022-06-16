@@ -1,5 +1,7 @@
 // Important variables
 const grid = document.getElementById('grid');
+const resetButton = document.getElementById('reset-button');
+const slider = document.getElementById("myRange");
 
 
 // Helper functions
@@ -21,8 +23,10 @@ function makeGrid(num){
     }
 }
 
-// Etch-a-Sketch behavior
-    //Checks and adds increasingly dark styles to cells
+makeGrid(slider.value) // Grid created based on slider input
+
+//Creates etchie sketchie behavior.
+//Checks and adds increasingly dark styles to cells
 function addToggleClass(){
     if (this.classList.contains("toggle1")){
         this.classList.add("toggle2");
@@ -33,24 +37,38 @@ function addToggleClass(){
     }
 }
 
-//Slider value
-let slider = document.getElementById("myRange");
-let output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+// Grabs all the contents of the grid and resets them to null, 
+// and remakes using makeGrid func and slider value
+function eraseGrid(){ 
+    grid.innerHTML = '';
+    makeGrid(slider.value);
+}
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-} 
-
-makeGrid(slider.value) // Grid created based on slider input
-
-// slider.addEventListener('mouseup', makeGrid(slider.value));
-
-
-
-// Adds 'toggle' css class to change color
+// Uses the behavior defined in addToggleClass() at mouseover.
+// Add more colors if desired. Could also work with onclick.
 document.querySelectorAll('.cell').forEach(cell =>
-    cell.addEventListener("mouseover", addToggleClass)
-)
+    cell.addEventListener("mouseover", addToggleClass))
+ 
+
+// Above behavior is added to each reset possibility
+// Mouseover effects did not apply after first reset
+// Unknown solution but this works
+resetButton.addEventListener('click', () =>{    
+    eraseGrid();
+    document.querySelectorAll('.cell').forEach(cell =>
+        cell.addEventListener("mouseover", addToggleClass)
+    )
+});
+
+slider.addEventListener('click', () =>{    
+    eraseGrid();
+    document.querySelectorAll('.cell').forEach(cell =>
+        cell.addEventListener("mouseover", addToggleClass)
+    )
+});
+
+
+
+
+
 
